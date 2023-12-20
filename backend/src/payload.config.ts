@@ -9,6 +9,7 @@ import { buildConfig } from 'payload/config'
 import Users from './collections/Users'
 import Channel from './collections/Channel'
 import Regis from './collections/Regis'
+import Status from './collections/Status'
 
 export default buildConfig({
   admin: {
@@ -16,7 +17,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Channel, Regis],
+  collections: [Users, Channel, Regis, Status],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
